@@ -25,10 +25,10 @@ const SidebarMenu = ({ isOpen, onClose }) => {
           isOpen ? "translate-x-0 shadow-2xl" : "translate-x-full"
         }`}
       >
-        <div className="flex flex-col justify-between h-full px-4 py-6">
+        <div className="flex flex-col justify-between h-full px-8 py-6">
           <RxCross2 className="absolute top-5 right-5 text-2xl"
             onClick={onClose} />
-          <nav className="flex flex-col mt-10 justify-between gap-4 ">
+          <nav className="flex flex-col mt-10 justify-between gap-6 ">
             {links.map((item, index) => (
               <Link
                 to={item.to}
