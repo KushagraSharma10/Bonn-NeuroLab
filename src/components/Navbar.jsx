@@ -18,16 +18,18 @@ const Navbar = () => {
         Klinische Funktionelle Bildgebung
       </h1>
       <div className="hidden md:flex links items-center gap-8">
-      <div className="flex links items-center gap-8">
-        {links.map((link, idx)=>{
-          return (
-            <Link to={link.to} key={idx} className="">
-              {link.link}
-            </Link>
-          );
-        })}
-      </div>
-      <button className="text-sm px-3 py-2 rounded-md font-semibold bg-[#F0F2F5] text-gray-600">DE | EN</button>
+        <div className="flex links items-center gap-8">
+          {links.map((link, idx) => {
+            return (
+              <Link to={link.to} key={idx} className="">
+                {link.link}
+              </Link>
+            );
+          })}
+        </div>
+        <button className="text-sm px-3 py-2 rounded-md font-semibold bg-[#F0F2F5] text-gray-600 hover:cursor-pointer hover:bg-gray-200 transition duration-300 ease-in-out">
+          DE | EN
+        </button>
       </div>
       <RxHamburgerMenu className="md:hidden  text-lg" />
     </div>
