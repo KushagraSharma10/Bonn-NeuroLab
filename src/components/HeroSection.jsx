@@ -1,22 +1,26 @@
-import React from 'react'
+import React from 'react';
 
 const HeroSection = () => {
   return (
-    <div className='relative w-full  '>
-         <img
-        src="src/assets/hero.jpg"
+    <div className="relative w-full h-[70vh] md:h-[60vh] flex items-center justify-center bg-black overflow-hidden z-0">
+      <img
+        src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
-        className='absolute w-full h-full object-cover z-[-2]'
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-60 z-[-1]"
       />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30 z-[-1]" />
-        <div className='text-center px-4 py-10'>
-            <h1 className='text-3xl font-[700]'>Klinische Funktionelle Neurobildgebung</h1>
-            <p className='text-lg md:text-xl font-medium text-zinc-300 mt-3'>University Hospital Bonn – Department of Psychiatry and Psychotherapy</p>
-            <p className='text-base md:text-lg text-gray-600 max-w-xl'>Researching brain diseases using functional MRI and PET – from neurodegenerative disorders to the effects of endurance sports.</p>
-        </div>
+      <div className="relative text-center px-4 md:px-12 py-8 md:py-16 text-white max-w-5xl">
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+          Klinische Funktionelle Neurobildgebung
+        </h1>
+        <p className="text-base md:text-xl font-medium text-zinc-200 mt-4">
+          University Hospital Bonn – Department of Psychiatry and Psychotherapy
+        </p>
+        <p className="text-sm md:text-lg text-zinc-300 mt-4">
+          Researching brain diseases using functional MRI and PET – from neurodegenerative <br /> disorders to the effects of endurance sports.
+        </p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
