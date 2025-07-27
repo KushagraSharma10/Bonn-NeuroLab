@@ -16,7 +16,7 @@ const SidebarMenu = ({ isOpen, onClose }) => {
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 sbg-black bg-opacity-10 backdrop-blur-[10px]  z-40"
+          className="fixed inset-0 bg-opacity-10 backdrop-blur-[10px] z-40"
           onClick={onClose}
         />
       )}
