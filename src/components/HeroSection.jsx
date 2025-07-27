@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-[70vh] md:h-[60vh] flex items-center justify-center bg-black overflow-hidden z-0">
+    <div className="relative w-full h-[55vh] md:h-[60vh] flex items-center justify-center bg-black overflow-hidden z-0">
       <img
         src="https://images.unsplash.com/photo-1617791160536-598cf32026fb?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt=""
