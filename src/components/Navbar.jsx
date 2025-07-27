@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router";
+import SidebarMenu from "./sidebarMenu";
 
 const Navbar = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const links = [
     { link: "Home", to: "/" },
     { link: "Research", to: "/research" },
@@ -13,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex items-center justify-between px-3 py-4 md:px-8 border-b border-gray-200">
+    <div className="sticky top-0 flex items-center justify-between px-3 py-4 md:px-8 border-b border-gray-200">
       <h1 className="text-lg md:text-xl font-semibold md:font-bold">
         Klinische Funktionelle Bildgebung
       </h1>
@@ -31,8 +34,12 @@ const Navbar = () => {
       </nav>
 
       <button aria-label="Open menu" className="md:hidden">
-        <RxHamburgerMenu className="text-lg" />
+        <RxHamburgerMenu
+          className="text-lg"
+          onClick={() => setSidebarOpen(true)}
+        />
       </button>
+      <SidebarMenu isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </div>
   );
 };
